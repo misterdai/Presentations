@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h2 Speakers
+  a.btn.btn-success(href="/speakers/add") Add a speaker
+  ul.list-group
+    - for (var i = 0; i < records.length; i++) {
+      li.list-group-item
+        a.pull-right.btn.btn-danger.btn-xs(href="/speakers/delete/" + records[i].id) Delete 
+        a(href="/speakers/edit/" + records[i].id)
+          =  records[i].firstName
+          strong= ' ' + records[i].lastName
+    - }

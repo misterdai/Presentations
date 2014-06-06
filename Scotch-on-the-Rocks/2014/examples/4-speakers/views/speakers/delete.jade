@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h2 Speakers &gt; 
+    = record.firstName + ' ' + record.lastName
+  
+  form(role="form" method="post")
+    button(type="submit" class="btn btn-danger") Delete
+    a(href="/speakers" class="btn btn-default") Cancel

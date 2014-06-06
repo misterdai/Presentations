@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h2 Speakers &gt; 
+    = record.firstName + ' ' + record.lastName
+  
+  form(role="form" method="post")
+    div.form-group
+      label(for="firstName") FirstName 
+      input(type="input" class="form-control" name="firstName" value=record.firstName)
+    div.form-group
+      label(for="lastName") LastName 
+      input(type="input" class="form-control" name="lastName" value=record.lastName)
+    button(type="submit" class="btn btn-default") Submit
